@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
@@ -22,19 +23,24 @@ public class Main {
             }
 
             if(player.equals("A")){ // 점수 반영
+                //System.out.println("point : " + point);
                 score[0] = score[0] + point;
             } else{
                 score[1] = score[1] + point;
             }
+
+            //System.out.println("scores : " + score[0] + " " + score[1]);
 
             if(score[0] > score[1]){ // A 가 높은 점수
                 if(!hall.contains("A")){ // A 가 없는 경우
                     hall.clear();
                     hall.add("A");
                     changes++;
-                } else { // B 가 있는 경우 제거
+                } else if(hall.contains("B")){ // B 가 있는 경우 제거
                     hall.remove("B");
                     changes++;
+                } else { // 이미 A 가 있는 경우
+                    continue;
                 }
             } else if (score[0] < score[1]) { // B 가 높은 점수
                 if(!hall.contains("B")) { // B 가 없는 경우
@@ -54,6 +60,8 @@ public class Main {
                     changes++;
                 }
             }
+            //System.out.println("changes: " + changes);
+            //System.out.println("hall: " + hall);
         }
 
         System.out.println(changes);
