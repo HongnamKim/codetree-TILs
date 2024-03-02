@@ -18,13 +18,14 @@ public class Main {
         int location;
         for(int i = 0; i < list.size(); i++){
             if(min < list.get(i)){
-                secondMin = list.get(i);
-                location = i;
-                if(i != list.size()-1 && list.get(i+1) == secondMin){
+                secondMin = list.get(i); // 두번재로 작은 수
+                
+                if(i != list.size()-1 && list.get(i+1) == secondMin){ // 더 있는지 확인
                     System.out.println(-1);
                     return;
                 }
-                System.out.println(location);
+                
+                System.out.println(nums.indexOf(secondMin) + 1);
                 return;
             }
         }
