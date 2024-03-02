@@ -17,11 +17,14 @@ public class Main {
         
         int[] bPosition = find(board, 'B', boardSize);
         int[] lPosition = find(board, 'L', boardSize);
+        int[] rPosition = find(board, 'R', boardSize);
 
         int rowDistance = Math.abs(bPosition[1] - lPosition[1]);
         int colDistance = Math.abs(bPosition[0] - lPosition[0]);
 
-        int totalDistance = rowDistance + colDistance - 1;
+        boolean isSameLine = checkSameLine(bPosition, lPosition, rPosition);
+
+        int totalDistance = isSameLine ? rowDistance + colDistance + 1 : rowDistance + colDistance - 1;
 
         System.out.println(totalDistance);
         
@@ -37,5 +40,15 @@ public class Main {
         }
 
         return new int[]{-1, -1};
+    }
+
+    public static boolean checkSameLine(int[] bPosition, int[] lPosition, int[] rPosition){
+        if(bPosition[0] == lPosition[0] && lPosition[0] == rPosition[0]){
+            return true;
+        } else if (bPosition[1] == lPosition[1] && lPosition[1] == rPosition[1]) {
+            return true;
+        }
+
+        return false;
     }
 }
