@@ -44,8 +44,30 @@ public class Main {
 
     public static boolean checkSameLine(int[] bPosition, int[] lPosition, int[] rPosition){
         if(bPosition[0] == lPosition[0] && lPosition[0] == rPosition[0]){
+            if(bPosition[1] > lPosition[1] && rPosition[1] > bPosition[1]){
+                // l b r
+                return false;
+            } else if (bPosition[1] < lPosition[1] && rPosition[1] > lPosition[1]) {
+                // b l r
+                return false;
+            } else if (rPosition[1] < bPosition[1] && rPosition[1] < lPosition[1]) {
+                // r l b
+                // r b l
+                return false;
+            }
             return true;
         } else if (bPosition[1] == lPosition[1] && lPosition[1] == rPosition[1]) {
+            if(bPosition[0] > lPosition[0] && rPosition[0] > bPosition[0]){
+                // l b r
+                return false;
+            } else if (bPosition[0] < lPosition[0] && rPosition[0] > lPosition[0]) {
+                // b l r
+                return false;
+            } else if (rPosition[0] < bPosition[0] && rPosition[0] < lPosition[0]) {
+                // r l b
+                // r b l
+                return false;
+            }
             return true;
         }
 
