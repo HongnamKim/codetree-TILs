@@ -15,11 +15,11 @@ public class Main {
         int count = 0;
         for(int i = 0; i < n-2; i++){
             for(int j = 1; j < n - 1; j++){
-                if(cows[i] < cows[j]){
+                if(cows[i] > cows[j]){
                     continue;
                 }
                 for(int k = 2; k < n; k++){
-                    if(cows[j] < cows[k]) {
+                    if(cows[j] > cows[k]) {
                         continue;
                     }
                     count++;
