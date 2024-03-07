@@ -12,11 +12,7 @@ public class Main {
 
     public static void GCD(int n, int m){
         int smallNum = n > m ? m : n;
-        if(smallNum == 1){
-            System.out.println(1);
-            return;
-        }
-        for(int i = smallNum; i >= 2; i--){
+        for(int i = smallNum; i >= 1; i--){
             if(n % i == 0 && m % i == 0){
                 System.out.println(i);
                 return;
