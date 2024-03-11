@@ -9,8 +9,17 @@ public class Main {
         char[] b = sc.nextLine().toCharArray();
 
         Arrays.sort(a);
+        String sortedA = new String(a);
         Arrays.sort(b);
+        String sortedB = String.valueOf(b);
 
+        if(sortedA.equals(sortedB)){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+
+        /*
         if(a.length != b.length){
             System.out.println("No");
             return;
@@ -23,5 +32,6 @@ public class Main {
             }
         }
         System.out.println("Yes");
+        */
     }
 }
