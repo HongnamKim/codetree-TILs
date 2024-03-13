@@ -1,7 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+
 import java.util.Scanner;
-import java.util.stream.Collectors;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -12,15 +12,21 @@ public class Main {
         int k = sc.nextInt();
         String T = sc.next();
 
-        List<String> arr = new ArrayList<>();
+        String[] arr = new String[n];
+        int index = 0;
         for(int i = 0; i < n; i++){
             String temp = sc.next();
             if(temp.startsWith(T)) {
-                arr.add(temp);
+                arr[index++] = temp;
             }
         }
 
-        List<String> collect = arr.stream().sorted().collect(Collectors.toList());
-        System.out.println(collect.get(k-1));
+        String[] arr2 = new String[index];
+        for(int i = 0; i < index; i++){
+            arr2[i] = arr[i];
+        }
+
+        Arrays.sort(arr2);
+        System.out.println(arr2[k-1]);
     }
 }
