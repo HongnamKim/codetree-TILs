@@ -17,8 +17,8 @@ public class Main {
 
         int latestIndex = 0;
         for(int i = 0; i < n - 1; i++){
-            if(addresses[i].name.compareTo(addresses[i + 1].name) < 0) {
-                latestIndex = i + 1;
+            if(addresses[latestIndex].name.compareTo(addresses[i].name) < 0) {
+                latestIndex = i;
             }
         }
 
@@ -34,18 +34,6 @@ public class Main {
             this.name = name;
             this.code = code;
             this.city = city;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getCode() {
-            return code;
-        }
-
-        public String getCity() {
-            return city;
         }
 
         @Override
