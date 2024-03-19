@@ -16,7 +16,7 @@ public class Main {
         //System.out.println(b.compareTo(a));
 
         int latestIndex = 0;
-        for(int i = 0; i < n - 1; i++){
+        for(int i = 0; i < n; i++){
             if(addresses[latestIndex].name.compareTo(addresses[i].name) < 0) {
                 latestIndex = i;
             }
