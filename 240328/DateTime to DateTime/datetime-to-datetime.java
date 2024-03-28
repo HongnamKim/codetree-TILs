@@ -16,6 +16,10 @@ public class Main {
 
         Duration duration = Duration.between(pivotDate, inputDate);
         long l = duration.getSeconds() / 60;
-        System.out.println(l);
+        if(l < 0){
+            System.out.println(-1);
+        } else {
+            System.out.println(l);    
+        }
     }
 }
