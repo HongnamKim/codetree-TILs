@@ -4,7 +4,9 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 
 const [n, k] = input[0].split(' ').map(Number);
 
-const block = [];
+//const block = [];
+
+const block = Array(n).fill(0);
 
 for(let i = 0; i < n; i++) {
     block.push(0);
@@ -20,12 +22,14 @@ for(let i = 1; i <= k; i++) {
     }
 }
 
-let max = block[0];
+//let max = block[0];
 
-for (let i = 0; i < n; i++) {
-    if(block[i] > max) {
-        max = block[i];
-    }
-}
+// for (let i = 0; i < n; i++) {
+//     if(block[i] > max) {
+//         max = block[i];
+//     }
+// }
+
+const max = Math.max(...block);
 
 console.log(max);
