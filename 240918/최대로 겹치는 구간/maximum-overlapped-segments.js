@@ -4,9 +4,9 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 
 const n = input[0].split(' ').map(Number);
 
-const offset = 0;
+const offset = 100;
 
-const board = new Array(10).fill(0);
+const board = new Array(201).fill(0);
 
 for(let i = 1; i <= n; i++){
     let [start, end] = input[i].split(' ').map(Number);
