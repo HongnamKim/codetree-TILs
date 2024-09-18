@@ -6,7 +6,7 @@ const n = input[0].split(' ').map(Number);
 
 const offset = 0;
 
-const board = new Array(100).fill(0);
+const board = new Array(101).fill(0);
 
 for(let i = 1; i <= n; i++){
     let [start, end] = input[i].split(' ').map(Number);
