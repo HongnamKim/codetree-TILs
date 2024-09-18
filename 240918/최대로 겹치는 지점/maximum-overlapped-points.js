@@ -21,7 +21,7 @@ for(let i = 1; i <= n; i++){
 
     
 }
-console.log(board);
+
 const result = Math.max(...board);
 
 console.log(result);
