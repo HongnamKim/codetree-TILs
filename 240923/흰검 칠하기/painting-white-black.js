@@ -48,20 +48,25 @@ for(let i = 0; i < R; i++){
         continue;
     }
 
-    let bCount = 0;
-    let wCount = 0;
+    
 
     
 
     if(colors.length > 3) {
-        for(let j = 0; j < colors.length; j++){
-        if(colors[j] === 'b') bCount++;
-        else wCount++;
+        let bCount = 0;
+        let wCount = 0;
 
-        if(wCount === 2 && bCount === 2){
-            G++;
-            break;
-        }
+        for(let j = 0; j < colors.length; j++){
+            if(colors[j] === 'b') {
+                bCount++;
+            } else {
+                wCount++;
+            }
+
+            if(wCount === 2 && bCount === 2){
+                G++;
+                break;
+            }
     }
     }else if(colors[colors.length - 1] === 'w') {
         W++;
