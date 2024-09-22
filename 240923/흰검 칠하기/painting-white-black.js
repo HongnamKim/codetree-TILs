@@ -6,7 +6,7 @@ const n = +input[0];
 
 //console.log(`n: ${n}`);
 
-const OFFSET = 5;
+const OFFSET = 100 * 1000;
 const R = 2 * OFFSET + 1;
 let currentLocation = OFFSET;
 
