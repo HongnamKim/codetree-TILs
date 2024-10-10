@@ -4,7 +4,7 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 
 const n = +input[0];
 
-const OFFSET = 6;
+const OFFSET = 100;
 const R = 2 * OFFSET + 1;
 
 const board = [];
