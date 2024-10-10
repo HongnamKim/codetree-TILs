@@ -22,7 +22,7 @@ for(let i = 1; i <= n; i++){
 
     for(let j = x1 + OFFSET; j < x2 + OFFSET; j++) {
         for(let k = y1 + OFFSET; k < y2 + OFFSET; k++) {
-            if(board[j][k] != 1) {
+            if(board[j][k] !== 1) {
                 area++;
                 board[j][k] = 1
             }
